@@ -1,0 +1,8 @@
+buses.csv:	Zone definitions for the 20 GB transmission zones (Z1_1 through Z17) plus the virtual GB_H2 hydrogen hub used in 2035 scenarios. 
+generator_reliability.csv:	Forced outage parameters (MTTF and MTTR in hours) per generator carrier type. All build scripts use it to compute failure rates λ = 1/MTTF and repair rates μ = 1/MTTR. 
+generators_static.csv: All generators in the 2024 system — name, zone (bus), carrier type, and nameplate capacity (p_nom in MW)
+storage_static.csv: Includes the GB_H2_storage unit representing the coupled electrolysis and hydrogen turbine system (658 GWh energy capacity, 7,426 MW charge, 2,743 MW discharge)
+loads_p_set.csv:	Hourly electrical demand (MW) per zone for the 2024 weather year — 8,784 rows (leap year) × 20 zone columns
+links.csv	Includes H2 turbine and electrolysis links connecting the virtual GB_H2 hydrogen hub to zones Z3, Z4, Z5 and Z10 in addition to AC/DC transmission
+generators_p_max_pu.csv:	Per-farm hourly capacity factor profiles (0–1) for wind and solar generators that have individual profiles — 8,784 rows × n_generators columns
+renewables_cf_by_region.csv:	Regional hourly capacity factor profiles used as fallback for variable renewable generators without individual per-farm profiles
