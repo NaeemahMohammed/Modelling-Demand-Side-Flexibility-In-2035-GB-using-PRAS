@@ -1,0 +1,7 @@
+These scripts read from the data/ folder and construct the PRAS SystemModel, run the Monte Carlo assessment, and save results as .jls serialised files.
+
+File	Description
+build_gb_pras_system.jl:	Builds the 2024 baseline PRAS system. Reads all data files, assigns generators to zones, applies hourly weather profiles to variable renewables using a two-layer fallback (per-farm first, regional second), constructs storage and transmission objects, and runs assess() with 1,000 Sequential Monte Carlo samples
+build_gb_pras_system2035both.jl:	Builds the 2035 Holistic Transition system for either weather year. Identical structure to the 2024 script but includes hydrogen storage construction, VRE individual forced outage rate embedding, and Demand Response units. Set DISPLAY_WEATHER_YEAR at the top to switch between WY:2020 and WY:2015
+build_experiment.jl:	Sensitivity experiment version of the 2035 build. Sets all generator and storage forced outage rates to zero (perfect reliability), scales AC/DC transmission capacity by 10×, removes the regional CF fallback, and adjusts H2 turbine discharge capacity via H2_DURATION_HRS. Used to isolate structural generation deficits from stochastic effects
+reload_session.jl:	Reconstructs all variables from saved .jls files in a fresh Julia session without re-running the full build. Run this at the start of any analysis session instead of rebuilding
