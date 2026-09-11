@@ -19,9 +19,3 @@ load_Z6,Z6,electricity,,0.0,0.0,-1.0,True
 load_Z7,Z7,electricity,,0.0,0.0,-1.0,True
 load_Z8,Z8,electricity,,0.0,0.0,-1.0,True
 load_Z9,Z9,electricity,,0.0,0.0,-1.0,True
-EU_demand_Britned,HVDC_External_Netherlands_Maasvlakte,EU_export,,0.0,0.0,-1.0,True
-EU_demand_IFA,HVDC_External_France_Calais,EU_export,,0.0,0.0,-1.0,True
-EU_demand_IFA2,HVDC_External_France_Calais,EU_export,,0.0,0.0,-1.0,True
-EU_demand_Nemo Link,HVDC_External_Belgium_Zeebrugge,EU_export,,0.0,0.0,-1.0,True
-EU_demand_ElecLink,HVDC_External_France_Calais,EU_export,,0.0,0.0,-1.0,True
-EU_demand_East West Interconnector,HVDC_External_Ireland_Rush_North_Beach,EU_export,,0.0,0.0,-1.0,True
